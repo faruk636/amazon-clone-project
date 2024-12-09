@@ -1,0 +1,23 @@
+.backToTop {
+    /* position: fixed; */
+    bottom: 50px;
+    right: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f3a847; /* Amazon's orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.backToTop:hover {
+    background-color: #d89136;
+}
+
+.backToTop:active {
+    transform: scale(0.95);
+}

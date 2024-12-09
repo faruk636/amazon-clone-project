@@ -12,6 +12,7 @@ import {loadStripe} from '@stripe/stripe-js'
 import {Elements} from '@stripe/react-stripe-js'
 import Payment from './Compnents/Payment/Payment'
 import Orders from './Compnents/Orders/Orders'
+import BackToTop from './Compnents/BackToTop/BackToTop'
 
 const promise=loadStripe('pk_test_51QIMXjEyIfxdSU9hA1PbsPF2M5GbaEkakFQJkInT23qiemiBpSDblK8X0ywrDOUMHk9ZePVIE2Rtb4b1yq9YyhPV00unm50IlH')
 
@@ -36,8 +37,8 @@ function App() {
     <div className='app'>
       <Routes>
 
-        <Route index element={<><Header/><Home/></>}/>
-        <Route path="/checkout"  element={<><Header/><Checkout/></>}/>
+        <Route index element={<><Header/><Home/><BackToTop/></>}/>
+        <Route path="/checkout"  element={<><Header/><Checkout/><BackToTop/></>}/>
         <Route path="/login"    element={<Login/>}/>
         <Route path='/payment'  element={<><Header/><Elements stripe={promise}><Payment/></Elements></>}/>
         <Route path="/orders"  element={<><Header/><Orders/></>}/>
